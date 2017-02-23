@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Exercise 5</title>
+
+    <!-- Bootstrap -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+
+<ol class="breadcrumb">
+    <li>Exercise 1</li>
+    <li>Exercise 2</li>
+    <li>Exercise 3</li>
+    <li>Exercise 4</li>
+    <li class="active">Exercise 5</li>
+</ol>
+
+<h2>Exercise 5</h2>
+
+<p>You are given a list of entries for a menu item together with the page they link to. Your task is to use JavaScript,
+    HTML and CSS to build an interactive menu similar to the one shown at the bottom of the page.</p>
+
+<h4>JavaScript</h4>
+<div id="jsEditor" class="editor">
+
+buildMenu({
+  "Home": "home.htm",
+  "Join Now": "joinnow.htm",
+  "Betting Guide": "bettingguide.htm",
+  "Contact Us": "contactus.htm",
+  "About Us": "aboutus.htm",
+  "Help": "help.htm"
+});</div>
+
+<h4>HTML</h4>
+<div id="htmlEditor" class="editor"></div>
+
+<h4>CSS</h4>
+<div id="cssEditor" class="editor"></div>
+
+<button type="button" class="btn btn-primary" onclick="evaluateAnswer()"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Run</button>
+<button type="button" class="btn btn-success" onclick="saveSolution()"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Submit</button>
+
+<img src="example.png" />
+
+<div id="result"></div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/mode-javascript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/mode-html.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/mode-css.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/theme-chrome.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/script.js"></script>
+<script src="/exercise5/script.js"></script>
+<script>
+    setupEditor();
+</script>
+</body>
+</html>

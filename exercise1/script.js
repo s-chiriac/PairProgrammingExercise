@@ -1,0 +1,52 @@
+function evaluateAnswer() {
+    let currentAlert = document.getElementById('result-alert');
+    let expectedAnswer = "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\nFizz\n22\n23\nFizz\nBuzz\n26\nFizz\n28\n29\nFizzBuzz\n31\n32\nFizz\n34\nBuzz\nFizz\n37\n38\nFizz\nBuzz\n41\nFizz\n43\n44\nFizzBuzz\n46\n47\nFizz\n49\nBuzz\nFizz\n52\n53\nFizz\nBuzz\n56\nFizz\n58\n59\nFizzBuzz\n61\n62\nFizz\n64\nBuzz\nFizz\n67\n68\nFizz\nBuzz\n71\nFizz\n73\n74\nFizzBuzz\n76\n77\nFizz\n79\nBuzz\nFizz\n82\n83\nFizz\nBuzz\n86\nFizz\n88\n89\nFizzBuzz\n91\n92\nFizz\n94\nBuzz\nFizz\n97\n98\nFizz\nBuzz\n";
+
+    let result = {
+        status: 'danger',
+        message: ''
+    };
+
+    window.exercise1String = '';
+    window.exercise2Array = [];
+
+    eval(ace.edit('editor').getValue());
+
+    if (window.exercise1String === expectedAnswer) {
+        result.status = 'success';
+        result.message = `Correct! The output is:\n${expectedAnswer}`;
+    } else {
+        result.message = `That's not quite right, the resulting output is:\n${window.exercise1String}`;
+    }
+
+    if (currentAlert) {
+        document.body.removeChild(currentAlert);
+    }
+
+    printResult(result);
+
+    saveSolution(false);
+}
+
+function saveSolution(redirect = true) {
+    let answers = JSON.parse(window.localStorage.getItem('answers'));
+
+    answers.exercise1 = ace.edit('editor').getValue();
+    window.localStorage.setItem('answers', JSON.stringify(answers));
+
+    if (redirect) {
+        window.location.href = '/exercise2';
+    }
+}
+
+function setupEditor() {
+    window.exercise1String = '';
+    window.exercise2Array = [];
+
+    let editor = ace.edit('editor');
+    editor.setTheme('ace/theme/chrome');
+    editor.getSession().setMode('ace/mode/javascript');
+    editor.getSession().setTabSize(2);
+    editor.setShowPrintMargin(false);
+    editor.gotoLine(2);
+}

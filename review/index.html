@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Exercise 1</title>
+
+    <!-- Bootstrap -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+
+<ol class="breadcrumb">
+    <li >Exercise 1</li>
+    <li >Exercise 2</li>
+    <li >Exercise 3</li>
+    <li >Exercise 4</li>
+    <li >Exercise 5</li>
+    <li >Done</li>
+    <li class="active">Review</li>
+</ol>
+
+<h2>Review</h2>
+
+<h3>Exercise 1</h3>
+<div id="exercise1" class="editor"></div>
+
+<button type="button" class="btn btn-primary" onclick="evaluateAnswer1()"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Run</button>
+
+<h3>Exercise 2</h3>
+<div id="exercise2" class="editor"></div>
+
+<button type="button" class="btn btn-primary" onclick="evaluateAnswer2()"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Run</button>
+
+<h3>Exercise 3</h3>
+<div id="exercise3" class="editor"></div>
+
+<button type="button" class="btn btn-primary" onclick="evaluateAnswer3()"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Run</button>
+
+<div id="result3"></div>
+
+<h3>Exercise 4</h3>
+<div id="exercise4" class="editor"></div>
+
+<button type="button" class="btn btn-primary" onclick="evaluateAnswer4()"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Run</button>
+
+<h3>Exercise 5</h3>
+<h4>JavaScript</h4>
+<div id="exercise5" class="editor"></div>
+
+<h4>HTML</h4>
+<div id="exercise5html" class="editor"></div>
+
+<h4>CSS</h4>
+<div id="exercise5css" class="editor"></div>
+
+<button type="button" class="btn btn-primary" onclick="evaluateAnswer5()"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Run</button>
+
+<h4>Example</h4>
+<img src="/exercise5/example.png" />
+
+<div id="result5"></div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/mode-javascript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/mode-html.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/mode-css.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/theme-chrome.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/script.js"></script>
+<script src="/review/script.js"></script>
+<script>
+    setupEditor();
+</script>
+</body>
+</html>

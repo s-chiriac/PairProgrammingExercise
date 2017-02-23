@@ -1,0 +1,31 @@
+body {
+    width: 1000px;
+    margin: auto;
+}
+
+.editor {
+    width: 1000px;
+    height: 300px;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+}
+
+.btn {
+    margin: 12px 0;
+}
+
+.btn-success {
+    float: right;
+}
+
+.alert {
+    white-space: pre-wrap;
+}
+
+#page-frame {
+    width: 1000px;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 12px;
+}

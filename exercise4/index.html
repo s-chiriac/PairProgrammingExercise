@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Exercise 4</title>
+
+    <!-- Bootstrap -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+
+<ol class="breadcrumb">
+    <li>Exercise 1</li>
+    <li>Exercise 2</li>
+    <li>Exercise 3</li>
+    <li class="active">Exercise 4</li>
+</ol>
+
+<h2>Exercise 4</h2>
+
+<p>You will be given a list of stock prices for a given day and your goal is to return the maximum profit that could
+    have been made by buying a stock at the given price and then selling the stock later on.</p>
+
+<p>For example if the input is: <code>[45, 24, 35, 31, 40, 38, 11]</code> then your program should return
+    <code>16</code> because if you bought the stock at £24 and sold it at £40, a profit of £16 was made and this is
+    the largest profit that could be made.</p>
+
+<p>If no profit could have been made, return <code>0</code>.</p>
+
+<p><strong>Your solution will be evaluated against different sets of numbers.</strong></p>
+
+<div id="editor" class="editor">let priceList = [45, 24, 35, 31, 40, 38, 11];
+
+function calculateMaximumProfit(prices) {
+
+}
+
+calculateMaximumProfit(priceList);</div>
+
+<button type="button" class="btn btn-primary" onclick="evaluateAnswer()"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Run</button>
+<button type="button" class="btn btn-success" onclick="saveSolution()"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Submit</button>
+
+<div id="result"></div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/mode-javascript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/theme-chrome.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/script.js"></script>
+<script src="/exercise4/script.js"></script>
+<script>
+    setupEditor();
+</script>
+</body>
+</html>
